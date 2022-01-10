@@ -6,16 +6,15 @@
   padding: 0;
 }
 
-html{
+html, body{
   height: 100%;
-}
-body{
   width: 100%;
-  height: 100%;
-  min-width: 200px;
-
 }
 
+body{
+  min-width: 200px;
+  background-color: rgb(199, 191, 191);
+}
 .navbar{
   background-color: #000 !important;
 }
@@ -61,13 +60,15 @@ h1{
 
 #footer{
   width: 100%;
-  height: auto;
+  height: 4vh;
   position: fixed;
   bottom: 0;
-}
-.footer__container{
   padding: 1rem;
 }
+#footer>p{
+  margin:0;
+}
+
 .footer_link{
   text-decoration: none;
   color: #fff;
@@ -77,19 +78,11 @@ h1{
   color: rgb(195, 215, 231);
 }
 #page-content{
-  position: relative;
   width: 100%;
   height: 100%;
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-  background-color: rgb(199, 191, 191);
 }
 @media only screen and (max-width: 250px) {
   #page-content{
-    overflow: scroll;
     height: 100vh;
   }
   .jumbotron{
