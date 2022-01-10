@@ -1,8 +1,21 @@
-<h1>Articles</h1>
+<h2 class="text-center mt-4 text-black"><%= @article.title%></h1>
+  <div class="container">
+    <div class="row justify-content-center align-items-center mt-4">
+      <div class="col-8">
+        <div class="card text-center shadow p-0 mb-5 bg-white rounded">
+          <div class="card-header font-italic">
+            By Xxx
+          </div>
+          <div class="card-body">
+            <div class="card-text text-start"><%= simple_format(@article.description) %></div>
+            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
+            <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure"} %>
+          </div>
+          <div class="card-footer text-muted">
+            <small>Created ago <%= time_ago_in_words(@article.created_at) %>, edited ago <%= time_ago_in_words(@article.updated_at) %></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<p><strong>Title:</strong> <%= @article.title%></p>
-<p><strong>Description:</strong> <%= @article.description%></p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> | 
-<%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %> | 
-<%= link_to 'Return', articles_path %> 

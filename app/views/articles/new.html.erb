@@ -1,12 +1,4 @@
-<h1>Create new article</h1>
-
-<% if @article.errors.any?%>
-  <h2>The follwoing errors prevented from article beig saved</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg|%>
-      <li><%= msg%></li>
-    <%end%> 
-  </ul>
-<%end%>
-<%= render 'form' %>
-<%= link_to 'Cancel and Return', articles_path %> 
+<h1 class="text-center mt-4 text-black">Create new article</h1>
+<div class="container">
+  <%= render 'form' %>
+</div>
