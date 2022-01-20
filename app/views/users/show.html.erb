@@ -1,4 +1,7 @@
 <h1 class="text-center mt-4 text-black"><%= @user.username %>'s profile</h1>
 <br>
+<div class="text-center mt-4">
+  <%= link_to 'edit your profile', edit_user_path(@user), class: "btn btn-outline-info" %>
+</div>
 <h3 class="text-center mt-4 text-black"><%= @user.username %>'s articles</h1>
 <%=render 'articles/article'%>
