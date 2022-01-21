@@ -7,13 +7,14 @@
 }
 
 html, body{
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
 
 body{
   min-width: 200px;
   background-color: rgb(199, 191, 191);
+  margin-bottom: 50px;
 }
 .navbar{
   background-color: #000 !important;
@@ -41,7 +42,7 @@ h1{
 }
 // hero
 .jumbotron{
-  min-height: 100%;
+  height: 90vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -60,7 +61,7 @@ h1{
 
 #footer{
   width: 100%;
-  height: 4vh;
+  height: 50px;
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -81,6 +82,35 @@ h1{
   width: 100%;
   height: 100%;
 }
+// pagination styling
+.apple_pagination {
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 4rem;
+  cursor: default; }
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em; }
+  .apple_pagination .disabled {
+    color: #aaaaaa; }
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: #bebebe;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+  .apple_pagination a {
+    text-decoration: none;
+    color: black; }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline; }
 @media only screen and (max-width: 250px) {
   #page-content{
     height: 100vh;
